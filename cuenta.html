@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Twitter</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
+</head>
+<body>
+    <!-- Inicio Header -->
+    <header>
+        <div class="nav">
+            <a href=""><img src="image/logo.png" alt=""></a>
+
+            <a href=""><img src="image/bird-home.png" alt=""></a>
+
+            <a href=""><img src="image/hashtag.png" alt=""></a>
+
+            <a href=""><img src="image/bell.png" alt=""></a>
+
+            <a href=""><img src="image/envelope.png" alt=""></a>
+
+            <a href=""><img src="image/user.png" alt=""></a>
+
+            <a href=""><img src="image/more.png" alt=""></a>
+
+            <button class="btn-twittear"><img src="image/add.png" alt=""></button>
+        </div>
+
+        <div class="cuentas">
+            <a href="">
+                <img class="cuentas-img" src="image/profile-pic-diego.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- Fin Header -->
+
+    <!-- Inicio Main -->
+    <main>
+        <div class="main">
+            <div class="main-feed">
+                <div class="inicio">
+                    <span>Inicio</span>
+                    <img src="image/star.png" alt="">
+                </div>
+                <div class="nuevo-tweet">
+                    <img class="cuentas-img" src="image/profile-pic-diego.png" alt="">
+                    <div class="nuevo-detalles">
+                        <input type="text" id="input-tweet" placeholder="¿Qué está pasando?" onkeyup = "if(event.keyCode == 13) tweet()">
+                        <div class="nuevo-acciones">
+                            <ul>
+                                <li>
+                                    <img src="image/image.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="image/gif.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="image/chart.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="image/happy.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="image/calendar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="image/location.png" alt="">
+                                </li>
+                            </ul>
+                            <button class="btn-tweet" onclick="tweet()">Twittear</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tweets -->
+                <div class="new-feed" id="new-feed">
+                </div>
+
+                <div class="feed">
+                    <img class="cuentas-img" src="image/perfil-1.jpg" alt="">
+                    <div class="feed-detalles">
+                        <div class="feed-tweet-detalles">
+                            <a href="" class="feed-name">
+                                Omar Rdriguz
+                                <span class="feed-cuenta">
+                                    @R_Omar
+                                </span>
+                            </a>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <div class="feed-texto">
+                            <p>senectus et netus et malesuada fames ac turpis egestas integer</p>
+                        </div>
+                        <div class="feed-iconos">
+                            <img src="image/chat.png" alt="">
+                            <img src="image/repost.png" alt="">
+                            <img src="image/heart.png" alt="" id="like" onclick="like()">
+                            <img src="image/share.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed">
+                    <img class="cuentas-img" src="image/perfil-2.jpg" alt="">
+                    <div class="feed-detalles">
+                        <div class="feed-tweet-detalles">
+                            <a href="" class="feed-name">
+                                Brenda Lopez
+                                <span class="feed-cuenta">
+                                    @brendWorld
+                                </span>
+                            </a>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <div class="feed-texto">
+                            <p>senectus et netus et malesuada fames ac turpis egestas integer</p>
+                        </div>
+                        <div class="feed-iconos">
+                            <img src="image/chat.png" alt="">
+                            <img src="image/repost.png" alt="">
+                            <img src="image/heart.png" alt="" id="like" onclick="like()">
+                            <img src="image/share.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed">
+                    <img class="cuentas-img" src="image/perfil-3.jpg" alt="">
+                    <div class="feed-detalles">
+                        <div class="feed-tweet-detalles">
+                            <a href="" class="feed-name">
+                                Amelia Ruiz 
+                                <span class="feed-cuenta">
+                                    @am_2088
+                                </span>
+                            </a>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <div class="feed-texto">
+                            <p>vivamus arcu felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque</p>
+                        </div>
+                        <div class="feed-iconos">
+                            <img src="image/chat.png" alt="">
+                            <img src="image/repost.png" alt="">
+                            <img src="image/heart.png" alt="" id="like" onclick="like()">
+                            <img src="image/share.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed">
+                    <img class="cuentas-img" src="image/profile-pic-diego.png" alt="">
+                    <div class="feed-detalles">
+                        <div class="feed-tweet-detalles">
+                            <a href="" class="feed-name">
+                                Diego Ortiz 
+                                <span class="feed-cuenta">
+                                    @go_diego
+                                </span>
+                            </a>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <div class="feed-texto">
+                            <p>senectus et netus et malesuada fames ac turpis egestas integer</p>
+                        </div>
+                        <div class="feed-iconos">
+                            <img src="image/chat.png" alt="">
+                            <img src="image/repost.png" alt="">
+                            <img src="image/heart.png" alt="" id="like" onclick="like()">
+                            <img src="image/share.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed">
+                    <img class="cuentas-img" src="image/perfil-4.jpg" alt="">
+                    <div class="feed-detalles">
+                        <div class="feed-tweet-detalles">
+                            <a href="" class="feed-name">
+                                Joel Abad
+                                <span class="feed-cuenta">
+                                    @yoelison19
+                                </span>
+                            </a>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <div class="feed-texto">
+                            <p>senectus et netus et malesuada fames ac turpis egestas integer</p>
+                        </div>
+                        <div class="feed-iconos">
+                            <img src="image/chat.png" alt="">
+                            <img src="image/repost.png" alt="">
+                            <img src="image/heart.png" alt="" id="like" onclick="like()">
+                            <img src="image/share.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed">
+                    <img class="cuentas-img" src="image/perfil-5.jpg" alt="">
+                    <div class="feed-detalles">
+                        <div class="feed-tweet-detalles">
+                            <a href="" class="feed-name">
+                                Bryhan Rancel
+                                <span class="feed-cuenta">
+                                    @past_two
+                                </span>
+                            </a>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <div class="feed-texto">
+                            <p>risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel</p>
+                        </div>
+                        <div class="feed-iconos">
+                            <img src="image/chat.png" alt="">
+                            <img src="image/repost.png" alt="">
+                            <img src="image/heart.png" alt="" id="like" onclick="like()">
+                            <img src="image/share.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="main-side">
+                <div class="busqueda">
+                    <input type="text" placeholder="Buscar en Twitter">
+                </div>
+
+                <div class="tendencias">
+                    <h1 class="tendencias-titulo">Tendencias para ti</h1>
+                    <!-- Tendencias -->
+                    <div class="tendencias-card">
+                        <div class="tendencia-item">
+                            <span>Tendencia en República Dominicana</span>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <p>El PRM</p>
+                        <span>2.259 Tweets</span>
+                    </div>
+
+                    <div class="tendencias-card">
+                        <div class="tendencia-item">
+                            <span>Política · Tendencia</span>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <p>Rusia</p>
+                        <span>98,6 mil Tweets</span>
+                    </div>
+
+                    <div class="tendencias-card">
+                        <div class="tendencia-item">
+                            <span>Política · Tendencia</span>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <p>EEUU</p>
+                        <span>58,7 mil Tweets</span>
+                    </div>
+
+                    <div class="tendencias-card">
+                        <div class="tendencia-item">
+                            <span>Tendencia en República Dominicana</span>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <p>Jesucristo</p>
+                        <span>2.259 Tweets</span>
+                    </div>
+
+                    <div class="tendencias-card">
+                        <div class="tendencia-item">
+                            <span>Tendencia en República Dominicana</span>
+                            <img src="image/more-detal.png" alt="">
+                        </div>
+                        <p>Sammy</p>
+                        <span>17,3 mil Tweets</span>
+                    </div>
+
+                    <a href="" class="mostrar">Mostrar mas</a>
+                </div>
+
+                <div class="seguir">
+                    <h1 class="tendencias-titulo">A quién seguir</h1>
+                    <!-- Perfiles -->
+                    <div class="perfiles">
+                        
+                        <img class="cuentas-img" src="image/perfil-6.jpg" alt="">
+
+                        <div class="perfiles-detalles">
+                            <a href="">Beto Campos</a>
+                            <span>@campsbeto</span>
+                        </div>
+                        <button class="btn-seguir">Seguir</button>
+                    </div>
+
+                    <div class="perfiles">
+                        
+                        <img class="cuentas-img" src="image/perfil-7.jpg" alt="">
+
+                        <div class="perfiles-detalles">
+                            <a href="">Laura Matos</a>
+                            <span>@laura13</span>
+                        </div>
+                        <button class="btn-seguir">Seguir</button>
+                    </div>
+
+                    <a href="" class="mostrar">Mostrar mas</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Fin Main -->
+    <script src="js/main.js"></script>
+</body>
+</html>
